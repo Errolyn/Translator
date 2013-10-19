@@ -1,0 +1,29 @@
+org_state = raw_input()
+org_state = org_state.lower()
+#org_state =[element.lower() for element in org_state]
+#org_state = ''.join(org_state)
+#print org_state
+wrd_brk_dwn = org_state.split(" ")
+finished = list()
+#print wrd_brk_dwn
+
+for word in wrd_brk_dwn:
+	#print word
+	let_brk_dwn = list(word)
+	first = let_brk_dwn.pop(0)
+	#first = let_brk_dwn[0]
+	let_brk_dwn.append(first)
+	#let_brk_dwn.remove(first)
+
+	vowl = ['a','e','i','o','u']	
+	if first in vowl:
+		let_brk_dwn.extend(['y'])
+	else:
+		let_brk_dwn.extend(["a", "y"])
+		#print let_brk_dwn
+		
+	mk_wrd = "".join(let_brk_dwn)
+	finished.append(mk_wrd)
+
+full_sentence = " ".join(finished)
+print full_sentence

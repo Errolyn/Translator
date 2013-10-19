@@ -1,0 +1,4 @@
+from pylagin01 import translate
+
+test = 'hey there'
+translate(test)
